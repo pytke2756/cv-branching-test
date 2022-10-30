@@ -1,5 +1,5 @@
 import React, { useState, useRef } from "react";
-
+import "./UserInput.css";
 const UserInput = () => {
   /* a plussz gombra kattintva megjelenik egy input mező 
         ahova be lehet írni az adatot majd az elfogadás 
@@ -11,7 +11,7 @@ const UserInput = () => {
   const addNewSkillRef = useRef();
 
   const handleAddSkills = () => {
-    setIsSkillDisplay(pervState => !pervState)
+    setIsSkillDisplay((pervState) => !pervState);
   };
 
   const handleNewSkillAdd = () => {
@@ -19,7 +19,7 @@ const UserInput = () => {
   };
 
   const addedSkills = skills.map((skill, index) => (
-    <h1 key={index}>{skill}</h1>
+    <li key={index}><span>{skill}</span><button className="btn" type="button">x</button></li>
   ));
   return (
     <>
@@ -34,16 +34,19 @@ const UserInput = () => {
             +
           </button>
           {/*{skills.length > 0 ? addedSkills : <h1>nincs</h1>}*/}
-          {isSkillDisplay && <><input type="text" ref={addNewSkillRef} />
-          <button
-            className="btn new-skill-aprove"
-            onClick={handleNewSkillAdd}
-            type="button"
-          >
-            approve
-          </button>
-          {addedSkills}</>
-          }
+          {isSkillDisplay && (
+            <div className="input add-input">
+              <input type="text" ref={addNewSkillRef} />
+              <button
+                className="btn new-skill-aprove"
+                onClick={handleNewSkillAdd}
+                type="button"
+              >
+                approve
+              </button>
+              <ul className="data">{addedSkills}</ul>
+            </div>
+          )}
         </div>
       </div>
     </>
