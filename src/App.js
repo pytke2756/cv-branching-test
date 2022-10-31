@@ -1,10 +1,11 @@
 import { useContext, useState } from "react";
 import CvTest from "./components/CvTest";
 import Form from "./components/Form";
+import Sidebar from "./components/template/Sidebar";
+import Content from "./components/template/Content";
 /* import DataProvider from "./store/DataProvider"; */
 import DataContext from "./store/data-context";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Sidebar from "./components/template/Sidebar/Sidebar";
 function App() {
   const [data1, setData1] = useState("");
   const [data2, setData2] = useState("");
@@ -35,7 +36,7 @@ function App() {
     <DataContext.Provider value={dataContext}>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Sidebar />} />
+          <Route path="/" element={<Content />} />
           <Route path="/done" element={<CvTest />} />
         </Routes>
       </BrowserRouter>
