@@ -1,0 +1,7 @@
+.cols{
+    display: flex;
+    flex-direction: row;
+}
+.col{
+    align-content: center;
+}

@@ -1,9 +1,10 @@
-import { useContext, useState } from "react";
-import CvTest from "./components/CvTest";
-import Form from "./components/Form";
-/* import DataProvider from "./store/DataProvider"; */
-import DataContext from "./store/data-context";
+import { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+import CvTest from "./components/CvTest";
+import DataContext from "./store/data-context";
+import UserInputList from "./components/user-input/user-input-list/UserInputList";
+
 function App() {
   const [data1, setData1] = useState("");
   const [data2, setData2] = useState("");
@@ -34,7 +35,7 @@ function App() {
     <DataContext.Provider value={dataContext}>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Form />} />
+          <Route path="/" element={<UserInputList />} />
           <Route path="/done" element={<CvTest />} />
         </Routes>
       </BrowserRouter>
