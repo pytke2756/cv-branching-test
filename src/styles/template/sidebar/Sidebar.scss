@@ -1,0 +1,55 @@
+.side-bar {
+  position: absolute;
+  height: 29.7cm;
+  width: 6cm;
+  background-color: rgb(40, 78, 104);
+  color: rgb(228, 228, 228);
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  .image {
+    height: 6cm;
+    position: relative;
+    img {
+      position: absolute;
+      top: 50%;
+      right: 50%;
+      transform: translate(50%, -50%);
+      width: 85%;
+      height: 85%;
+      object-fit: cover;
+      display: block;
+      border-radius: 50%;
+    }
+  }
+  h2 {
+    text-transform: uppercase;
+    padding-left: 20px;
+    font-size: 1.2rem;
+    margin-top: 30px;
+  }
+  .personal-details {
+    h3 {
+      padding-left: 20px;
+      line-height: 8px;
+      font-size: 1.1rem;
+    }
+    p {
+      padding-left: 24px;
+      line-height: 8px;
+      font-size: 1rem;
+    }
+  }
+  .interests {
+    p {
+      padding-left: 24px;
+      line-height: 10px;
+      font-size: 1.1rem;
+    }
+  }
+  .languages {
+    p {
+      padding-left: 24px;
+      line-height: 10px;
+      font-size: 1.1rem;
+    }
+  }
+}

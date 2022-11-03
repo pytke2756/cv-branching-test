@@ -2,6 +2,9 @@ import { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import CvTest from "./components/CvTest";
+import Form from "./components/Form";
+import Sidebar from "./components/template/Sidebar";
+import Content from "./components/template/Content";
 import DataContext from "./store/data-context";
 import UserInputList from "./components/user-input/user-input-list/UserInputList";
 
@@ -35,6 +38,7 @@ function App() {
     <DataContext.Provider value={dataContext}>
       <BrowserRouter>
         <Routes>
+          <Route path="/template" element={<Content />} />
           <Route path="/" element={<UserInputList />} />
           <Route path="/done" element={<CvTest />} />
         </Routes>

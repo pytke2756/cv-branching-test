@@ -1,0 +1,22 @@
+.side-bar {
+  border: 1px solid red;
+  position: absolute;
+  height: 29.7cm;
+  width: 6cm;
+}
+.side-bar .image {
+  border: 1px solid blue;
+  height: 6cm;
+}
+.side-bar .personal-details {
+  border: 1px solid green;
+}
+.side-bar .personal-details p {
+  display: block;
+}
+.side-bar .interests {
+  border: 1px solid rgb(112, 0, 112);
+}
+.side-bar .languages {
+  border: 1px solid rgb(151, 48, 0);
+}/*# sourceMappingURL=Sidebar.css.map */
