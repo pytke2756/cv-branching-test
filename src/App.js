@@ -1,11 +1,13 @@
-import { useContext, useState } from "react";
+import { useState } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 import CvTest from "./components/CvTest";
 import Form from "./components/Form";
 import Sidebar from "./components/template/Sidebar";
 import Content from "./components/template/Content";
-/* import DataProvider from "./store/DataProvider"; */
 import DataContext from "./store/data-context";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import UserInputList from "./components/user-input/user-input-list/UserInputList";
+
 function App() {
   const [data1, setData1] = useState("");
   const [data2, setData2] = useState("");
@@ -36,7 +38,8 @@ function App() {
     <DataContext.Provider value={dataContext}>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Content />} />
+          <Route path="/template" element={<Content />} />
+          <Route path="/" element={<UserInputList />} />
           <Route path="/done" element={<CvTest />} />
         </Routes>
       </BrowserRouter>
